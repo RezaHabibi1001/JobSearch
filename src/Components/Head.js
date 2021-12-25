@@ -8,15 +8,10 @@ let HeadStyles = {
   },
   span: {
     fontWeight: 'bold',
-    paddingLeft: '20px',
+    paddingLeft: '10px',
   },
 }
 export const Head = () => {
-  let d = new Date()
-
-  let state = {
-    showDate: d.toDateString(),
-  }
   return (
     <div style={HeadStyles.div}>
       <span style={HeadStyles.span}>
@@ -31,10 +26,8 @@ export const Head = () => {
       <span style={HeadStyles.span}>
         <Link to="/Profile">Profile Setting</Link>
       </span>
-      <span
-        style={{ fontWeight: 'bold', paddingRight: '30px', float: 'right' }}
-      >
-        {state.showDate}
+      <span style={HeadStyles.span}>
+        <Link to="/FindFriend">Find Friend</Link>
       </span>
     </div>
   )

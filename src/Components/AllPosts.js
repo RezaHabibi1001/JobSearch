@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 let AllPostsStyle = {
   div: {
     backgroundColor: '#eeeeee',
@@ -28,6 +28,19 @@ let AllPostsStyle = {
   },
 }
 export const AllPosts = () => {
+  let state = {
+    name: 'Reza',
+    lastName: 'Habibi',
+    tittle: `The descriotion of the image will come here.The descriotion of
+        the image will come hereThe descriotion of the image will come
+        hereThe descriotion of the image will come here`,
+    like: 23,
+    disLike: 22,
+    image: '/reza4.png',
+    profileImage: '/whatsapp.png',
+  }
+  let [count, setCount] = useState(state.like)
+  let [deCount, setDeCount] = useState(state.disLike)
   return (
     <div style={AllPostsStyle.div}>
       <br />
@@ -45,7 +58,7 @@ export const AllPosts = () => {
               <img
                 style={{ float: 'left' }}
                 width="30px"
-                src="./whatsapp.png"
+                src={state.profileImage}
               />
               <span
                 style={{
@@ -54,24 +67,21 @@ export const AllPosts = () => {
                   paddingTop: '5px',
                 }}
               >
-                Reza Habibi
+                {state.name}-{state.lastName}
               </span>
               <br />
               <br />
-              <img width="100%" src="/reza4.png" alt="Image" />
+              <img width="100%" src={state.image} alt="Image" />
               <br />
               <br />
-              <span>
-                The descriotion of the image will come here.The descriotion of
-                the image will come hereThe descriotion of the image will come
-                hereThe descriotion of the image will come here
-              </span>
+              <span>{state.tittle}</span>
               <br />
               <hr />
               <table>
                 <tr>
                   <td>
                     <input
+                      onClick={() => setCount(count + 1)}
                       style={AllPostsStyle.likeInput}
                       type="button"
                       name="like"
@@ -80,19 +90,20 @@ export const AllPosts = () => {
                   </td>
                   <td>
                     <input
+                      onClick={() => setDeCount(deCount + 1)}
                       style={AllPostsStyle.disLikeInput}
                       type="button"
-                      name="like"
+                      name="disLike"
                       value="DisLike"
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <span> 34 </span>
+                    <span>{count}</span>
                   </td>
                   <td>
-                    <span> 56 </span>
+                    <span>{deCount}</span>
                   </td>
                 </tr>
               </table>

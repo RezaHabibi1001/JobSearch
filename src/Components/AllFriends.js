@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 let AllFriendsStyle = {
   div: {
@@ -27,10 +27,22 @@ let AllFriendsStyle = {
     fontSize: '15px',
     fontWeight: 'bold',
   },
+  follow: {
+    backgroundColor: 'lightGreen',
+  },
+  unFollow: {
+    backgroundColor: '#ff2222',
+  },
 }
 export const AllFriends = () => {
-  const navigate = useNavigate()
+  let state = {
+    relation: 'followed',
+  }
+  let [relation, setRelation] = useState(state.relation)
+  let changeRelation = () =>
+    relation == 'followed' ? setRelation('Unfollowed') : setRelation('followed')
 
+  const navigate = useNavigate()
   const routeChange = () => {
     navigate('/Content')
   }
@@ -75,9 +87,14 @@ export const AllFriends = () => {
             <td style={AllFriendsStyle.tr}>Habibi</td>
             <td style={AllFriendsStyle.tr}>
               <input
+                onClick={changeRelation}
                 type="button"
-                value="Followed"
-                style={{ backgroundColor: 'lightGreen' }}
+                value={relation}
+                style={
+                  relation == 'followed'
+                    ? AllFriendsStyle.follow
+                    : AllFriendsStyle.unFollow
+                }
               />
             </td>
             <td style={AllFriendsStyle.tr}>

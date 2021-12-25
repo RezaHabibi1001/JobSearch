@@ -8,7 +8,9 @@ import { Profile } from './Components/Profile'
 import { Login } from './Components/Login'
 import { Confirmation } from './Components/Confirmation'
 import { Register } from './Components/Register'
-
+import { AllFriends } from './Components/AllFriends'
+import { EmptyHeader } from './Components/EmptyHeader'
+import { FindFriend } from './Components/FindFriend'
 export const App = () => {
   return (
     <BrowserRouter>
@@ -17,7 +19,7 @@ export const App = () => {
           path="/"
           element={
             <Fragment>
-              <Head />
+              <EmptyHeader />
               <Login />
             </Fragment>
           }
@@ -37,7 +39,7 @@ export const App = () => {
           path="/Login"
           element={
             <Fragment>
-              <Head />
+              <EmptyHeader />
               <Login />
             </Fragment>
           }
@@ -64,7 +66,7 @@ export const App = () => {
           path="/Confirmation"
           element={
             <Fragment>
-              <Head />
+              <EmptyHeader />
               <Confirmation />
             </Fragment>
           }
@@ -73,7 +75,7 @@ export const App = () => {
           path="/Register"
           element={
             <Fragment>
-              <Head />
+              <EmptyHeader />
               <Register />
             </Fragment>
           }
@@ -84,6 +86,24 @@ export const App = () => {
             <Fragment>
               <Head />
               <Content />
+            </Fragment>
+          }
+        />
+        <Route
+          path="/AllFriends"
+          element={
+            <Fragment>
+              <Head />
+              <AllFriends />
+            </Fragment>
+          }
+        />
+        <Route
+          path="/FindFriend"
+          element={
+            <Fragment>
+              <Head />
+              <FindFriend />
             </Fragment>
           }
         />
