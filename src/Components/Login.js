@@ -47,7 +47,7 @@ export const Login = () => {
             />
           </tr>
           <tr>
-            <input style={LoginStyle.buttonInput} type="reset" name="image" />
+            <input style={LoginStyle.buttonInput} type="reset" name="reset" />
             <input style={LoginStyle.buttonInput} type="submit" name="submit" />
           </tr>
         </table>
