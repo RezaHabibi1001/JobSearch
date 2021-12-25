@@ -8,6 +8,7 @@ import { Profile } from './Components/Profile'
 import { Login } from './Components/Login'
 import { Confirmation } from './Components/Confirmation'
 import { Register } from './Components/Register'
+
 export const App = () => {
   return (
     <BrowserRouter>
@@ -17,7 +18,7 @@ export const App = () => {
           element={
             <Fragment>
               <Head />
-              <Content />
+              <Login />
             </Fragment>
           }
         />
@@ -74,6 +75,15 @@ export const App = () => {
             <Fragment>
               <Head />
               <Register />
+            </Fragment>
+          }
+        />
+        <Route
+          path="/Content"
+          element={
+            <Fragment>
+              <Head />
+              <Content />
             </Fragment>
           }
         />

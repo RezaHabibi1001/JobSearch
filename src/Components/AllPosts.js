@@ -41,7 +41,7 @@ export const AllPosts = () => {
       <form>
         <table style={AllPostsStyle.table}>
           <tr style={{ backgroundColor: '#F1E5ACd0' }}>
-            <div style={{ border: '2px solid gray', borderRadius: '10px' }}>
+            <div style={{ border: '2px solid #cccccc', borderRadius: '10px' }}>
               <img
                 style={{ float: 'left' }}
                 width="30px"
@@ -99,7 +99,7 @@ export const AllPosts = () => {
             </div>
           </tr>
           <tr style={{ backgroundColor: '#F1E5ACd0' }}>
-            <div style={{ border: '2px solid gray', borderRadius: '10px' }}>
+            <div style={{ border: '2px solid #cccccc', borderRadius: '10px' }}>
               <img
                 style={{ float: 'left' }}
                 width="30px"

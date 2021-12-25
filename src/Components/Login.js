@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import React from 'react'
 let LoginStyle = {
   div: {
@@ -25,6 +26,12 @@ let LoginStyle = {
   },
 }
 export const Login = () => {
+  const navigate = useNavigate()
+
+  const routeChange = () => {
+    navigate('/Confirmation')
+  }
+
   return (
     <div style={LoginStyle.div}>
       <br />
@@ -47,8 +54,13 @@ export const Login = () => {
             />
           </tr>
           <tr>
-            <input style={LoginStyle.buttonInput} type="reset" name="reset" />
-            <input style={LoginStyle.buttonInput} type="submit" name="submit" />
+            <input style={LoginStyle.buttonInput} type="reset" name="image" />
+            <input
+              onClick={routeChange}
+              style={LoginStyle.buttonInput}
+              type="submit"
+              name="submit"
+            />
           </tr>
         </table>
       </form>

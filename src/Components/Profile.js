@@ -28,17 +28,25 @@ let ProfileStyle = {
     maxHeight: '100px',
   },
   span: {
-    fontSize: '25px',
+    fontSize: '15px',
     fontWeight: 'bold',
   },
 }
 export const Profile = () => {
+  const successfully = () => {
+    document.getElementById('message').innerHTML =
+      'Your Profile Successfully Updated ! '
+  }
   return (
     <div style={ProfileStyle.div}>
       <br />
-      <span style={ProfileStyle.span}>
-        Welcome Ahmad you can edit your profile !
+      <span
+        id="message"
+        style={{ color: 'green', fontSize: '20px', fontWeight: 'bold' }}
+      >
+        Welcome to your Profile Setting !
       </span>
+
       <br />
       <br />
       <hr />
@@ -46,53 +54,56 @@ export const Profile = () => {
       <form>
         <table style={ProfileStyle.table}>
           <tr>
-            <span>First Name</span>
+            <span style={ProfileStyle.span}>First Name</span>
           </tr>
           <tr>
             <input
               style={ProfileStyle.input}
               type="text"
-              name="firstName"
-              placeholder=" Enter the first name"
+              name="name"
+              placeholder=" Enter Your First Name"
             />
           </tr>
           <tr>
-            <span>Last Name</span>
+            <span style={ProfileStyle.span}>Last Name</span>
           </tr>
           <tr>
             <input
               style={ProfileStyle.input}
               type="text"
-              name="lastName"
-              placeholder=" Enter the last name"
+              name="name"
+              placeholder=" Enter Your Last Name"
             />
           </tr>
 
           <tr>
-            <span>Biography</span>
+            <span style={ProfileStyle.span}>Biography</span>
           </tr>
           <tr>
             <textarea
               style={ProfileStyle.textareaInput}
-              name="biography"
-              placeholder=" Enter the biography"
+              name="message"
+              placeholder=" Enter the message"
             ></textarea>
           </tr>
           <tr>
-            <span>Profile Image</span>
+            <span style={ProfileStyle.span}>Profile Image</span>
           </tr>
           <tr>
-            <input type="file" name="image" />
-          </tr>
-          <tr>
-            {' '}
-            <br />{' '}
-          </tr>
-          <tr>
-            <input style={ProfileStyle.buttonInput} type="reset" name="image" />
             <input
+              style={ProfileStyle.input}
+              type="file"
+              name="image"
+              placeholder=" Choose Your Image"
+            />
+          </tr>
+          <tr>
+            <input style={ProfileStyle.buttonInput} type="reset" name="reset" />
+            <input
+              onClick={successfully}
               style={ProfileStyle.buttonInput}
               type="submit"
+              name="submit"
               value="Save"
             />
           </tr>

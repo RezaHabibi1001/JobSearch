@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import React from 'react'
 let ConfirmationStyle = {
   div: {
@@ -25,6 +26,11 @@ let ConfirmationStyle = {
   },
 }
 export const Confirmation = () => {
+  const navigate = useNavigate()
+
+  const routeChange = () => {
+    navigate('/Register')
+  }
   return (
     <div style={ConfirmationStyle.div}>
       <br />
@@ -38,7 +44,10 @@ export const Confirmation = () => {
       <form>
         <table style={ConfirmationStyle.table}>
           <tr>
-            <span>Verification Code: </span>
+            <span>
+              We have sent a Verification Code to your Email, please Enter that
+              code in the below Box{' '}
+            </span>
           </tr>
           <tr>
             <input
@@ -50,6 +59,7 @@ export const Confirmation = () => {
           </tr>
           <tr>
             <input
+              onClick={routeChange}
               style={ConfirmationStyle.buttonInput}
               type="submit"
               name="submit"

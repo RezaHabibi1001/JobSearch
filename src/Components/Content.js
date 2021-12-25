@@ -11,7 +11,11 @@ let ContentStyles = {
 export const Content = () => {
   return (
     <div style={ContentStyles.div}>
-      <span>This is the Content</span>
+      <br />
+      <br />
+      <span style={{ fontSize: '30px', paddingTop: '30px', color: 'green' }}>
+        Welcome to our Application{' '}
+      </span>
     </div>
   )
 }

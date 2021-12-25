@@ -26,6 +26,9 @@ export const Head = () => {
         <Link to="/AllPosts">Recent Posts</Link>
       </span>
       <span style={HeadStyles.span}>
+        <Link to="/AllFriends">AllFriends</Link>
+      </span>
+      <span style={HeadStyles.span}>
         <Link to="/Profile">Profile Setting</Link>
       </span>
       <span

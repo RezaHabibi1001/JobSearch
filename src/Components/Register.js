@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 let RegisterStyle = {
   div: {
     backgroundColor: '#eeeeee',
@@ -28,24 +29,31 @@ let RegisterStyle = {
     maxHeight: '100px',
   },
   span: {
-    fontSize: '25px',
+    fontSize: '15px',
     fontWeight: 'bold',
   },
 }
 export const Register = () => {
+  const navigate = useNavigate()
+
+  const routeChange = () => {
+    navigate('/Content')
+  }
+
   return (
     <div style={RegisterStyle.div}>
       <br />
-      <span style={RegisterStyle.span}>
-        Welcome Dear User, You Can Create an Account !
+      <span style={{ color: 'green', fontSize: '20px', fontWeight: 'bold' }}>
+        Welcome there User, Please complete your profile!
       </span>
+      <br />
       <br />
       <hr />
       <br />
       <form>
         <table style={RegisterStyle.table}>
           <tr>
-            <span>First Name</span>
+            <span style={RegisterStyle.span}>First Name</span>
           </tr>
           <tr>
             <input
@@ -56,7 +64,7 @@ export const Register = () => {
             />
           </tr>
           <tr>
-            <span>Last Name</span>
+            <span style={RegisterStyle.span}>Last Name</span>
           </tr>
           <tr>
             <input
@@ -67,18 +75,7 @@ export const Register = () => {
             />
           </tr>
           <tr>
-            <span>Email</span>
-          </tr>
-          <tr>
-            <input
-              style={RegisterStyle.input}
-              type="email"
-              name="name"
-              placeholder=" Enter Your email Address"
-            />
-          </tr>
-          <tr>
-            <span>BirthDay</span>
+            <span style={RegisterStyle.span}>BirthDay</span>
           </tr>
           <tr>
             <input
@@ -89,7 +86,7 @@ export const Register = () => {
             />
           </tr>
           <tr>
-            <span>Country</span>
+            <span style={RegisterStyle.span}>Country</span>
           </tr>
           <tr>
             <select style={RegisterStyle.input}>
@@ -100,7 +97,7 @@ export const Register = () => {
             </select>
           </tr>
           <tr>
-            <span>Biography</span>
+            <span style={RegisterStyle.span}>Biography</span>
           </tr>
           <tr>
             <textarea
@@ -110,7 +107,7 @@ export const Register = () => {
             ></textarea>
           </tr>
           <tr>
-            <span>Profile Image</span>
+            <span style={RegisterStyle.span}>Profile Image</span>
           </tr>
           <tr>
             <input
@@ -127,6 +124,7 @@ export const Register = () => {
               name="reset"
             />
             <input
+              onClick={routeChange}
               style={RegisterStyle.buttonInput}
               type="submit"
               name="submit"
