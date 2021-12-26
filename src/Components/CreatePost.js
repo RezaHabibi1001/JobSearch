@@ -43,53 +43,51 @@ export const CreatePost = () => {
       <br />
       <hr />
       <br />
-      <form>
-        <table style={CreatePostStyle.table}>
-          <tr>
-            <span>Tittle</span>
-          </tr>
-          <tr>
-            <input
-              style={CreatePostStyle.input}
-              type="text"
-              name="tittle"
-              placeholder=" Enter the tittle"
-            />
-          </tr>
-          <tr>
-            <span>Message</span>
-          </tr>
-          <tr>
-            <textarea
-              style={CreatePostStyle.textareaInput}
-              name="message"
-              placeholder=" Enter the message"
-            ></textarea>
-          </tr>
-          <tr>
-            <span>Image</span>
-          </tr>
-          <tr>
-            <input type="file" name="image" />
-          </tr>
-          <tr>
-            {' '}
-            <br />{' '}
-          </tr>
-          <tr>
-            <input
-              style={CreatePostStyle.buttonInput}
-              type="reset"
-              name="image"
-            />
-            <input
-              style={CreatePostStyle.buttonInput}
-              type="submit"
-              name="submit"
-            />
-          </tr>
-        </table>
-      </form>
+      <table style={CreatePostStyle.table}>
+        <tr>
+          <span>Tittle</span>
+        </tr>
+        <tr>
+          <input
+            style={CreatePostStyle.input}
+            type="text"
+            name="tittle"
+            placeholder=" Enter the tittle"
+          />
+        </tr>
+        <tr>
+          <span>Message</span>
+        </tr>
+        <tr>
+          <textarea
+            style={CreatePostStyle.textareaInput}
+            name="message"
+            placeholder=" Enter the message"
+          ></textarea>
+        </tr>
+        <tr>
+          <span>Image</span>
+        </tr>
+        <tr>
+          <input type="file" name="image" />
+        </tr>
+        <tr>
+          {' '}
+          <br />{' '}
+        </tr>
+        <tr>
+          <input
+            style={CreatePostStyle.buttonInput}
+            type="reset"
+            name="image"
+          />
+          <input
+            style={CreatePostStyle.buttonInput}
+            type="submit"
+            name="submit"
+          />
+        </tr>
+      </table>
     </div>
   )
 }

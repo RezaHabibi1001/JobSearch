@@ -40,30 +40,28 @@ export const Login = () => {
       <br />
       <hr />
       <br />
-      <form>
-        <table style={LoginStyle.table}>
-          <tr>
-            <span>Enter Your Email</span>
-          </tr>
-          <tr>
-            <input
-              style={LoginStyle.input}
-              type="email"
-              name="email"
-              placeholder=" Enter your Email"
-            />
-          </tr>
-          <tr>
-            <input style={LoginStyle.buttonInput} type="reset" name="image" />
-            <input
-              onClick={routeChange}
-              style={LoginStyle.buttonInput}
-              type="submit"
-              name="submit"
-            />
-          </tr>
-        </table>
-      </form>
+      <table style={LoginStyle.table}>
+        <tr>
+          <span>Enter Your Email</span>
+        </tr>
+        <tr>
+          <input
+            style={LoginStyle.input}
+            type="email"
+            name="email"
+            placeholder=" Enter your Email"
+          />
+        </tr>
+        <tr>
+          <input style={LoginStyle.buttonInput} type="reset" name="image" />
+          <input
+            onClick={routeChange}
+            style={LoginStyle.buttonInput}
+            type="submit"
+            name="submit"
+          />
+        </tr>
+      </table>
     </div>
   )
 }

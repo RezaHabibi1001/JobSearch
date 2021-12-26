@@ -51,64 +51,62 @@ export const Profile = () => {
       <br />
       <hr />
       <br />
-      <form>
-        <table style={ProfileStyle.table}>
-          <tr>
-            <span style={ProfileStyle.span}>First Name</span>
-          </tr>
-          <tr>
-            <input
-              style={ProfileStyle.input}
-              type="text"
-              name="name"
-              placeholder=" Enter Your First Name"
-            />
-          </tr>
-          <tr>
-            <span style={ProfileStyle.span}>Last Name</span>
-          </tr>
-          <tr>
-            <input
-              style={ProfileStyle.input}
-              type="text"
-              name="name"
-              placeholder=" Enter Your Last Name"
-            />
-          </tr>
+      <table style={ProfileStyle.table}>
+        <tr>
+          <span style={ProfileStyle.span}>First Name</span>
+        </tr>
+        <tr>
+          <input
+            style={ProfileStyle.input}
+            type="text"
+            name="name"
+            placeholder=" Enter Your First Name"
+          />
+        </tr>
+        <tr>
+          <span style={ProfileStyle.span}>Last Name</span>
+        </tr>
+        <tr>
+          <input
+            style={ProfileStyle.input}
+            type="text"
+            name="name"
+            placeholder=" Enter Your Last Name"
+          />
+        </tr>
 
-          <tr>
-            <span style={ProfileStyle.span}>Biography</span>
-          </tr>
-          <tr>
-            <textarea
-              style={ProfileStyle.textareaInput}
-              name="message"
-              placeholder=" Enter the message"
-            ></textarea>
-          </tr>
-          <tr>
-            <span style={ProfileStyle.span}>Profile Image</span>
-          </tr>
-          <tr>
-            <input
-              style={ProfileStyle.input}
-              type="file"
-              name="image"
-              placeholder=" Choose Your Image"
-            />
-          </tr>
-          <tr>
-            <input style={ProfileStyle.buttonInput} type="reset" name="reset" />
-            <input
-              onClick={successfully}
-              style={ProfileStyle.buttonInput}
-              type="submit"
-              name="submit"
-              value="Save"
-            />
-          </tr>
-        </table>
-      </form>
+        <tr>
+          <span style={ProfileStyle.span}>Biography</span>
+        </tr>
+        <tr>
+          <textarea
+            style={ProfileStyle.textareaInput}
+            name="message"
+            placeholder=" Enter the message"
+          ></textarea>
+        </tr>
+        <tr>
+          <span style={ProfileStyle.span}>Profile Image</span>
+        </tr>
+        <tr>
+          <input
+            style={ProfileStyle.input}
+            type="file"
+            name="image"
+            placeholder=" Choose Your Image"
+          />
+        </tr>
+        <tr>
+          <input style={ProfileStyle.buttonInput} type="reset" name="reset" />
+          <input
+            onClick={successfully}
+            style={ProfileStyle.buttonInput}
+            type="submit"
+            name="submit"
+            value="Save"
+          />
+        </tr>
+      </table>
     </div>
   )
 }

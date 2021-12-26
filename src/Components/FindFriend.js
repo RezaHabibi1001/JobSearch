@@ -54,7 +54,6 @@ export const FindFriend = () => {
         Welcome Dear User, You can see your friennds here!
       </span>
       <hr />
-      <form>
         <table style={FindFriendStyle.table}>
           <tr>
             <td colSpan="4" style={FindFriendStyle.tr}>
@@ -136,7 +135,6 @@ export const FindFriend = () => {
             </td>
           </tr>
         </table>
-      </form>
     </div>
   )
 }

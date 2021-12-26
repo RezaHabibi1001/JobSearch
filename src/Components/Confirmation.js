@@ -41,32 +41,30 @@ export const Confirmation = () => {
       <br />
       <hr />
       <br />
-      <form>
-        <table style={ConfirmationStyle.table}>
-          <tr>
-            <span>
-              We have sent a Verification Code to your Email, please Enter that
-              code in the below Box{' '}
-            </span>
-          </tr>
-          <tr>
-            <input
-              style={ConfirmationStyle.input}
-              type="text"
-              name="verification"
-              placeholder="Enter the verification Code "
-            />
-          </tr>
-          <tr>
-            <input
-              onClick={routeChange}
-              style={ConfirmationStyle.buttonInput}
-              type="submit"
-              name="submit"
-            />
-          </tr>
-        </table>
-      </form>
+      <table style={ConfirmationStyle.table}>
+        <tr>
+          <span>
+            We have sent a Verification Code to your Email, please Enter that
+            code in the below Box{' '}
+          </span>
+        </tr>
+        <tr>
+          <input
+            style={ConfirmationStyle.input}
+            type="text"
+            name="verification"
+            placeholder="Enter the verification Code "
+          />
+        </tr>
+        <tr>
+          <input
+            onClick={routeChange}
+            style={ConfirmationStyle.buttonInput}
+            type="submit"
+            name="submit"
+          />
+        </tr>
+      </table>
     </div>
   )
 }

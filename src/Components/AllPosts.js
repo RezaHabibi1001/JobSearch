@@ -51,124 +51,118 @@ export const AllPosts = () => {
       <br />
       <hr />
       <br />
-      <form>
-        <table style={AllPostsStyle.table}>
-          <tr style={{ backgroundColor: '#F1E5ACd0' }}>
-            <div style={{ border: '2px solid #cccccc', borderRadius: '10px' }}>
-              <img
-                style={{ float: 'left' }}
-                width="30px"
-                src={state.profileImage}
-              />
-              <span
-                style={{
-                  float: 'left',
-                  paddingLeft: '10px',
-                  paddingTop: '5px',
-                }}
-              >
-                {state.name}-{state.lastName}
-              </span>
-              <br />
-              <br />
-              <img width="100%" src={state.image} alt="Image" />
-              <br />
-              <br />
-              <span>{state.tittle}</span>
-              <br />
-              <hr />
-              <table>
-                <tr>
-                  <td>
-                    <input
-                      onClick={() => setCount(count + 1)}
-                      style={AllPostsStyle.likeInput}
-                      type="button"
-                      name="like"
-                      value="Like"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      onClick={() => setDeCount(deCount + 1)}
-                      style={AllPostsStyle.disLikeInput}
-                      type="button"
-                      name="disLike"
-                      value="DisLike"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>{count}</span>
-                  </td>
-                  <td>
-                    <span>{deCount}</span>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </tr>
-          <tr style={{ backgroundColor: '#F1E5ACd0' }}>
-            <div style={{ border: '2px solid #cccccc', borderRadius: '10px' }}>
-              <img
-                style={{ float: 'left' }}
-                width="30px"
-                src="./whatsapp.png"
-              />
-              <span
-                style={{
-                  float: 'left',
-                  paddingLeft: '10px',
-                  paddingTop: '5px',
-                }}
-              >
-                Reza Habibi
-              </span>
-              <br />
-              <br />
-              <img width="100%" src="/reza.png" alt="Image" />
-              <br />
-              <br />
-              <span>
-                The descriotion of the image will come here.The descriotion of
-                the image will come hereThe descriotion of the image will come
-                hereThe descriotion of the image will come here
-              </span>
-              <br />
-              <hr />
-              <table>
-                <tr>
-                  <td>
-                    <input
-                      style={AllPostsStyle.likeInput}
-                      type="button"
-                      name="like"
-                      value="Like"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      style={AllPostsStyle.disLikeInput}
-                      type="button"
-                      name="like"
-                      value="DisLike"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span> 34 </span>
-                  </td>
-                  <td>
-                    <span> 56 </span>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </tr>
-        </table>
-      </form>
+      <table style={AllPostsStyle.table}>
+        <tr style={{ backgroundColor: '#F1E5ACd0' }}>
+          <div style={{ border: '2px solid #cccccc', borderRadius: '10px' }}>
+            <img
+              style={{ float: 'left' }}
+              width="30px"
+              src={state.profileImage}
+            />
+            <span
+              style={{
+                float: 'left',
+                paddingLeft: '10px',
+                paddingTop: '5px',
+              }}
+            >
+              {state.name}-{state.lastName}
+            </span>
+            <br />
+            <br />
+            <img width="100%" src={state.image} alt="Image" />
+            <br />
+            <br />
+            <span>{state.tittle}</span>
+            <br />
+            <hr />
+            <table>
+              <tr>
+                <td>
+                  <input
+                    onClick={() => setCount(count + 1)}
+                    style={AllPostsStyle.likeInput}
+                    type="button"
+                    name="like"
+                    value="Like"
+                  />
+                </td>
+                <td>
+                  <input
+                    onClick={() => setDeCount(deCount + 1)}
+                    style={AllPostsStyle.disLikeInput}
+                    type="button"
+                    name="disLike"
+                    value="DisLike"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>{count}</span>
+                </td>
+                <td>
+                  <span>{deCount}</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </tr>
+        <tr style={{ backgroundColor: '#F1E5ACd0' }}>
+          <div style={{ border: '2px solid #cccccc', borderRadius: '10px' }}>
+            <img style={{ float: 'left' }} width="30px" src="./whatsapp.png" />
+            <span
+              style={{
+                float: 'left',
+                paddingLeft: '10px',
+                paddingTop: '5px',
+              }}
+            >
+              Reza Habibi
+            </span>
+            <br />
+            <br />
+            <img width="100%" src="/reza.png" alt="Image" />
+            <br />
+            <br />
+            <span>
+              The descriotion of the image will come here.The descriotion of the
+              image will come hereThe descriotion of the image will come hereThe
+              descriotion of the image will come here
+            </span>
+            <br />
+            <hr />
+            <table>
+              <tr>
+                <td>
+                  <input
+                    style={AllPostsStyle.likeInput}
+                    type="button"
+                    name="like"
+                    value="Like"
+                  />
+                </td>
+                <td>
+                  <input
+                    style={AllPostsStyle.disLikeInput}
+                    type="button"
+                    name="like"
+                    value="DisLike"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span> 34 </span>
+                </td>
+                <td>
+                  <span> 56 </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </tr>
+      </table>
     </div>
   )
 }
