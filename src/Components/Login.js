@@ -35,14 +35,14 @@ export const Login = () => {
   return (
     <div style={LoginStyle.div}>
       <br />
-      <span style={LoginStyle.span}>Welcome To Login Form !</span>
+      <span style={LoginStyle.span}>Welcome to the job search application</span>
       <br />
       <br />
       <hr />
       <br />
       <table style={LoginStyle.table}>
         <tr>
-          <span>Enter Your Email</span>
+          <span></span>
         </tr>
         <tr>
           <input
