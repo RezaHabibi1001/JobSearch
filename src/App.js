@@ -2,15 +2,16 @@ import React, { Fragment } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Head } from './Components/Head'
 import { Content } from './Components/Content'
-import { CreatePost } from './Components/CreatePost'
-import { AllPosts } from './Components/AllPosts'
+import { WorkerAccount } from './Components/WorkerAccount'
+import { AllSuggestedStyle } from './Components/AllSuggested'
 import { Profile } from './Components/Profile'
-import { Login } from './Components/Login'
-import { Confirmation } from './Components/Confirmation'
+import { Login } from './Components/Login.js'
 import { Register } from './Components/Register'
-import { AllFriends } from './Components/AllFriends'
+import { AllPosts } from './Components/AllPosts'
 import { EmptyHeader } from './Components/EmptyHeader'
 import { FindFriend } from './Components/FindFriend'
+import { Welcome } from './Components/Welcom'
+import { EmployerAccount } from './Components/EmployerAccount'
 export const App = () => {
   return (
     <BrowserRouter>
@@ -19,22 +20,26 @@ export const App = () => {
           path="/"
           element={
             <Fragment>
-              <EmptyHeader />
               <Login />
             </Fragment>
           }
         />
-
         <Route
-          path="/CreatePost"
+          path="/WorkerAccount"
           element={
             <Fragment>
-              <Head />
-              <CreatePost />
+              <WorkerAccount />
             </Fragment>
           }
         />
-
+        <Route
+          path="/EmployerAccount"
+          element={
+            <Fragment>
+              <EmployerAccount />
+            </Fragment>
+          }
+        />
         <Route
           path="/Login"
           element={
@@ -45,11 +50,10 @@ export const App = () => {
           }
         />
         <Route
-          path="/AllPosts"
+          path="/AllSuggested"
           element={
             <Fragment>
-              <Head />
-              <AllPosts />
+              <AllSuggestedStyle />
             </Fragment>
           }
         />
@@ -59,15 +63,6 @@ export const App = () => {
             <Fragment>
               <Head />
               <Profile />
-            </Fragment>
-          }
-        />
-        <Route
-          path="/Confirmation"
-          element={
-            <Fragment>
-              <EmptyHeader />
-              <Confirmation />
             </Fragment>
           }
         />
@@ -90,11 +85,10 @@ export const App = () => {
           }
         />
         <Route
-          path="/AllFriends"
+          path="/AllPosts"
           element={
             <Fragment>
-              <Head />
-              <AllFriends />
+              <AllPosts />
             </Fragment>
           }
         />

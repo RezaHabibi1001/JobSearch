@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
 import '../Styles/AllSuggestedStyle.css';
-import { useNavigate } from 'react-router-dom'
-export const AllPosts = () => {
+import { useNavigate } from 'react-router-dom';
+
+
+export const AllSuggestedStyle = () => {
 
   const navigate = useNavigate()
   const routeChange = () => {
     navigate('/AllPosts')
   }
+
   return (
 
 <div class='all' dir='rtl'>
   <div class="header">
   <ul>
   <li><a href="#contact">تماس با ما</a></li>
-  <li><a onClick={routeChange} href="#news">تمام کارها</a></li>
+  <li onclick = {routeChange} ><a href="#news"> تمام کارها</a></li>
   <li><a class="active" href="#home"> پیشنهاد شده ها</a></li>
 </ul>
 
